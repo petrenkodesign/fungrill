@@ -51,7 +51,7 @@ function sw_lang() {
   var ccode = $.cookie("country");
   if(ccode == undefined) {
     // Get country region by IP
-    $.getJSON("http://ip-api.com/json",
+    $.getJSON("https://ip-api.com/json",
      function (data) {
        ccode = data.countryCode;
        $.cookie("country", ccode);
