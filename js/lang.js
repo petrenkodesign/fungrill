@@ -43,7 +43,7 @@ function create_lang_pop() {
 // Set language manual
 function set_lang(code="EN") {
   $.cookie("country", code);
-  window.location = "/";
+  window.location = window.location.href;
 }
 
 // Get language Code
@@ -55,7 +55,7 @@ function sw_lang() {
      function (data) {
        ccode = data.countryCode;
        $.cookie("country", ccode);
-       window.location = "";
+       window.location = window.location.href;
      }
    );
   }
