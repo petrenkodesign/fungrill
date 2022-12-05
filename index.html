@@ -6282,7 +6282,7 @@
                 style="display: none"
               >
                 <textarea class="tn-atom__inputs-textarea">
-{"0":{"lid":"1531306243545","ls":"10","loff":"","li_type":"nm","li_ph":"Ім`я","li_req":"y","li_nm":"Name"},"1":{"lid":"1531306540094","ls":"20","loff":"","li_type":"ph","li_req":"y","li_masktype":"a","li_nm":"Phone"},"2":{"lid":"1634394923889","ls":"30","loff":"","li_type":"em","li_ph":"E-mail","li_req":"y","li_nm":"Email"}}</textarea
+{"0":{"lid":"1531306243545","ls":"10","loff":"","li_type":"nm","li_ph":"Name","li_req":"y","li_nm":"Name"},"1":{"lid":"1531306540094","ls":"20","loff":"","li_type":"ph","li_req":"y","li_masktype":"a","li_nm":"Phone"},"2":{"lid":"1634394923889","ls":"30","loff":"","li_type":"em","li_ph":"E-mail","li_req":"y","li_nm":"Email"}}</textarea
                 >
               </div>
               <!--/noindex--><!--googleon: all-->
@@ -6298,7 +6298,7 @@
                           ls: "10",
                           loff: "",
                           li_type: "nm",
-                          li_ph: "Ім`я",
+                          li_ph: "Name",
                           li_req: "y",
                           li_nm: "Name",
                         },
@@ -7233,8 +7233,8 @@
             >
               <a
                 class="tn-atom"
-                href="privacy.html"
-                target="_blank">
+                href="#privacy"
+                onclick="openPop('ipopup_privacy');">
                 <u data="lng-txt">Privacy Policy</u>
               </a>
             </div>
@@ -7263,8 +7263,9 @@
             >
               <a
                 class="tn-atom"
-                href="dostavka.html"
-                target="_blank">
+                href="#dostavka"
+                target="_blank"
+                onclick="openPop('ipopup_dostavka');">
                 <u data="lng-txt">Payment & delivery</u>
               </a>
             </div>
@@ -7994,7 +7995,7 @@
                             -webkit-border-radius: 5px;
                           "
                         />
-                        <div class="t-input__vis-ph">Ім`я</div>
+                        <div class="t-input__vis-ph" data="lng-txt">Name</div>
                         <div class="t-input-error"></div>
                       </div>
                     </div>
@@ -8376,8 +8377,9 @@
                             -moz-border-radius: 5px;
                             -webkit-border-radius: 5px;
                           "
+                          data="lng-txt"
                         />
-                        <div class="t-input__vis-ph">Ім`я</div>
+                        <div class="t-input__vis-ph" data="lng-txt">Name</div>
                         <div class="t-input-error"></div>
                       </div>
                     </div>
@@ -8757,7 +8759,7 @@
                             -webkit-border-radius: 5px;
                           "
                         />
-                        <div class="t-input__vis-ph">Ім`я</div>
+                        <div class="t-input__vis-ph" data="lng-txt">Name</div>
                         <div class="t-input-error"></div>
                       </div>
                     </div>
@@ -9152,6 +9154,39 @@ s1.5-0.672,1.5-1.5L25.503,16.881z"
         </script>
       </div>
     </div>
+
+    <!-- Popup added -->
+    <link rel="stylesheet" href="css/popup.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+        var ccode = $.cookie("country");
+        if(ccode == undefined) ccode = "EN";
+
+        var pfname = 'privacy_'+ccode.toLowerCase()+'.html';
+        var dfname = 'dostavka_'+ccode.toLowerCase()+'.html';
+
+        fetch(pfname)
+        .then((resp) => resp.text())
+        .then((data) => {
+          initIpop("privacy", data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
+        fetch(dfname)
+        .then((resp) => resp.text())
+        .then((data) => {
+          initIpop("dostavka", data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      });
+    </script>
+    <!-- popup end -->
+
     <!--/allrecords--><!-- Stat -->
     <script type="text/javascript">
       if (!window.mainTracker) {
