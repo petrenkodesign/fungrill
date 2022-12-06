@@ -86,8 +86,6 @@
     background-position: 0 0;
   }
   .ipo-popup .content {
-    position: absolute;
-    top: 50%;
     width: 100%;
     padding: 15px;
   }
