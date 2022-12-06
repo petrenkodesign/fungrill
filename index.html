@@ -7490,7 +7490,7 @@
                           name="Name"
                           class="t-input js-tilda-rule"
                           value
-                          placeholder="ПІП"
+                          placeholder="Full name"
                           data-tilda-req="1"
                           data-tilda-rule="name"
                           style="
@@ -7500,6 +7500,8 @@
                             -moz-border-radius: 16px;
                             -webkit-border-radius: 16px;
                           "
+                          data="lng-place"
+                          data-lang="form-2-input-1"
                         />
                         <div class="t-input-error"></div>
                       </div>
@@ -7587,7 +7589,7 @@
                           name="Input"
                           class="t-input js-tilda-rule"
                           value
-                          placeholder="Місто та номер відділення Нової пошти"
+                          placeholder="City and branch number of the New Post Office"
                           data-tilda-req="1"
                           style="
                             color: #232323;
@@ -7596,6 +7598,8 @@
                             -moz-border-radius: 16px;
                             -webkit-border-radius: 16px;
                           "
+                          data="lng-place"
+                          data-lang="form-2-input-2"
                         />
                         <div class="t-input-error"></div>
                       </div>
@@ -7611,7 +7615,7 @@
                             name="Date"
                             class="t-input t-datepicker js-tilda-rule js-tilda-mask"
                             value
-                            placeholder="Дата доставки"
+                            placeholder="Delivery date"
                             data-tilda-rule="date"
                             data-tilda-dateformat="DD-MM-YYYY"
                             data-tilda-datediv="slash"
@@ -7623,6 +7627,8 @@
                               -moz-border-radius: 16px;
                               -webkit-border-radius: 16px;
                             "
+                            data="lng-place"
+                            data-lang="form-2-input-3"
                           />
                           <svg
                             role="presentation"
@@ -7697,7 +7703,7 @@
                             checked
                           />
                           <div class="t-checkbox__indicator"></div>
-                          Запам`ятати контакти для наступного замовлення</label
+                          <span data="lng-txt" data-lang="form-2-input-4">Remember the contacts for the next order</span></label
                         >
                         <div class="t-input-error"></div>
                       </div>
@@ -7710,7 +7716,7 @@
                         <textarea
                           name="Textarea"
                           class="t-input js-tilda-rule"
-                          placeholder="Коментар (не обовя`зково)"
+                          placeholder="Comment (optional)"
                           style="
                             color: #232323;
                             border: 1px solid #ededed;
@@ -7720,6 +7726,8 @@
                             height: 102px;
                           "
                           rows="3"
+                          data="lng-place"
+                          data-lang="form-2-input-5"
                         ></textarea>
                         <div class="t-input-error"></div>
                       </div>
@@ -7728,7 +7736,7 @@
                       class="t-input-group t-input-group_pm"
                       style="margin: 40px 0"
                     >
-                      <div class="t-input-title t-descr t-descr_md" style>
+                      <div class="t-input-title t-descr t-descr_md" style >
                         Payment method
                       </div>
                       <div class="t-input-block">
@@ -7746,7 +7754,7 @@
                               data-payment-variant-system="cash"
                             />
                             <div class="t-radio__indicator"></div>
-                            При отриманні
+                            <span data="lng-txt" data-lang="form-2-input-6">Upon receipt</span>
                           </label>
                           <label class="t-radio__control t-text t-text_xs" style
                             ><input
@@ -7757,7 +7765,7 @@
                               data-payment-variant-system="wayforpay"
                             />
                             <div class="t-radio__indicator"></div>
-                            Кредитною карткою (Visa, Mastercard) через WayForPay
+                            <span data="lng-txt" data-lang="form-2-input-7">By credit card (Visa, Mastercard) through WayForPay</span>
                           </label>
                         </div>
                       </div>
@@ -7927,7 +7935,7 @@
             data-tooltip-hook="#popup:cornerform"
             role="dialog"
             aria-modal="true"
-            aria-label="Спеціальна пропозиція"
+            aria-label="Special offer"
             style="
               width: 500px;
               border-radius: 5px;
@@ -7941,15 +7949,19 @@
                 <div
                   class="t945__title t-name t-name_xl"
                   style="color:#232323;font-weight:700;font-family:&#x27;Montserrat&#x27;;"
+                  data="lng-txt"
+                  data-lang="form-4-title"
                 >
-                  Спеціальна пропозиція
+                  Special offer
                 </div>
                 <div
                   class="t945__descr t-descr t-descr_xs"
                   style="color: #232323; font-weight: 400"
+                  data="lng-txt"
+                  data-lang="form-4-text"
                 >
-                  Замов від 10 наборів Fun Grill та отримай ексклюзивну ціну
-                  130грн/шт
+                Order from 10 Fun Grill sets and get an exclusive price
+                UAH 130/pc
                 </div>
                 <form
                   id="form367906517"
@@ -8692,7 +8704,7 @@
             data-tooltip-hook="#popup:cornerform2"
             role="dialog"
             aria-modal="true"
-            aria-label="Нам важлива Ваша думка"
+            aria-label="Your opinion is important to us"
             style="
               width: 500px;
               border-radius: 5px;
@@ -8706,14 +8718,18 @@
                 <div
                   class="t945__title t-name t-name_xl"
                   style="color:#232323;font-weight:700;font-family:&#x27;Montserrat&#x27;;"
+                  data="lng-txt"
+                  data-lang="form-5-title"
                 >
-                  Нам важлива Ваша думка
+                  Your opinion is important to us
                 </div>
                 <div
                   class="t945__descr t-descr t-descr_xs"
                   style="color: #232323; font-weight: 400"
+                  data="lng-txt"
+                  data-lang="form-5-text"
                 >
-                  Залиште, будь ласка, свій відгук про нашу продукцію!
+                  Please leave your feedback about our products!
                 </div>
                 <form
                   id="form388607289"
@@ -8730,8 +8746,10 @@
                   <div
                     class="js-successbox t-form__successbox t-text t-text_md"
                     style="display: none"
+                    data="lng-txt"
+                    data-lang="form-5-msg"
                   >
-                    Дякуємо за відгук!
+                    Thanks for the feedback!
                   </div>
                   <div class="t-form__inputsbox">
                     <div
@@ -8786,7 +8804,7 @@
                           "
                           rows="6"
                         ></textarea>
-                        <div class="t-input__vis-ph">Відгук</div>
+                        <div class="t-input__vis-ph" data="lng-txt" data-lang="form-5-input">Review</div>
                         <div class="t-input-error"></div>
                       </div>
                     </div>

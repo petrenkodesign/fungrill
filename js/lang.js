@@ -25,6 +25,7 @@ function ch_site_lang(lng='en') {
 
     $('[data=lng-place]').each(function() {
       var lang_content = $.trim($(this).attr("placeholder").toLowerCase());
+      if(data[lng][lang_content]==undefined) lang_content=$(this).attr("data-lang");
       $(this).attr("placeholder", data[lng][lang_content]);
     });
 
