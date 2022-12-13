@@ -75,3 +75,24 @@ function sw_lang() {
     ch_site_lang(ccode.toLowerCase());
   }
 }
+
+function getTranslate(word) {
+    var lng = $.cookie("country").toLowerCase();
+    if(lng == undefined) lng = 'en';
+    $.getJSON( "lng/"+lng+".json", function( data ) {
+      result = data[lng][word.toLowerCase()];
+      if(result==undefined) result = word;
+      return result;
+    });
+}
+
+
+function setTranslate(word, tag, attr=null) {
+    lng = $.cookie("country").toLowerCase();
+    if(lng == undefined) lng = 'en';
+    $.getJSON( "lng/"+lng+".json", function( data ) {
+      res = data[lng][word.toLowerCase()];
+      if(attr) $(tag).attr(attr, (res!=undefined) ? res : word);
+      else $(tag).text((res!=undefined) ? res : word);
+    });
+}
