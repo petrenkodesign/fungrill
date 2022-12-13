@@ -29,6 +29,12 @@ function ch_site_lang(lng='en') {
       $(this).attr("placeholder", data[lng][lang_content]);
     });
 
+    $('[data=lng-field]').each(function() {
+      var lang_content = $.trim($(this).attr("data-field-buttontitle-value").toLowerCase());
+      if(data[lng][lang_content]==undefined) lang_content=$(this).attr("data-lang");
+      $(this).attr("data-field-buttontitle-value", data[lng][lang_content]);
+    });
+
   }).fail(function() { console.log("Error: can`t find lang json, or wrong format!"); });
 }
 
